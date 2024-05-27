@@ -13,8 +13,9 @@ export default function App() {
         <>
             <input type="text" onChange={(e) => setSearchText(e.target.value)} placeholder="Search for a character"/>
             {
-                filteredCharacters.length > 0 ? <CharacterGallery characters={filteredCharacters}/> :
-                    <p>No characters found</p>
+                filteredCharacters.length > 0
+                    ? <CharacterGallery characters={filteredCharacters}/>
+                    : <p>No characters found</p>
             }
         </>
     );
