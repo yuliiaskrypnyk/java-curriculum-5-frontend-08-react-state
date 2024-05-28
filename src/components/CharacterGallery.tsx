@@ -1,9 +1,9 @@
-import {RickAndMortyCharacter} from "../types/RickAndMortyCharacter.ts";
+import {Character} from "../types/RickAndMortyCharacter.ts";
 import CharacterCard from "./CharacterCard.tsx";
 import "./CharacterGallery.css";
 
 type CharacterGalleryProps = {
-    characters: RickAndMortyCharacter[];
+    characters: Character[];
 }
 export default function CharacterGallery(props: Readonly<CharacterGalleryProps>) {
     const cards = props.characters.map((character) => <CharacterCard key={character.name} character={character}/>);
