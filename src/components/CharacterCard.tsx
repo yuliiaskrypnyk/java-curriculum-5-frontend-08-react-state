@@ -1,8 +1,8 @@
-import {RickAndMortyCharacter} from "../types/RickAndMortyCharacter.ts";
+import {Character} from "../types/RickAndMortyCharacter.ts";
 import "./CharacterCard.css";
 
 type CharacterCardProps = {
-    character: RickAndMortyCharacter;
+    character: Character;
 }
 
 export default function CharacterCard(props: Readonly<CharacterCardProps>) {
