@@ -1,5 +1,6 @@
 import {Character} from "../types/RickAndMortyCharacter.ts";
 import "./CharacterCard.css";
+import {Link} from "react-router";
 
 type CharacterCardProps = {
     character: Character;
@@ -7,6 +8,7 @@ type CharacterCardProps = {
 
 export default function CharacterCard(props: Readonly<CharacterCardProps>) {
     return (
+        <Link to={`/characters/${props.character.id}`}>
         <div className="character-card">
             <img src={props.character.image} alt={props.character.name}/>
             <div className="character-card-info">
@@ -15,5 +17,6 @@ export default function CharacterCard(props: Readonly<CharacterCardProps>) {
                 <p>Status: {props.character.status}</p>
             </div>
         </div>
+        </Link>
     );
 }
