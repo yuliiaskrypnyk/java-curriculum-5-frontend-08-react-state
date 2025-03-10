@@ -8,6 +8,7 @@ export default function Header () {
                 <ul>
                     <li><NavLink to="/">Home</NavLink></li>
                     <li><NavLink to="/characters">Characters</NavLink></li>
+                    <li><NavLink to="/characters/add">Add Character</NavLink></li>
                 </ul>
             </nav>
         </header>

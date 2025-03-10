@@ -7,11 +7,12 @@ type CharacterDetailCardProps = {
 
 export default function CharacterDetailCard({characters}: CharacterDetailCardProps)
 {
-    const {id} = useParams<{id: string}>()
-    const character = characters.find((char) => char.id === Number(id))
+    const params = useParams();
+    const id: string | undefined = params.id;
 
-    if (!character)
-    {
+    const character = characters.find((character) => character.id === Number(id))
+
+    if (!character) {
         return <p>Character not found!</p>
     }
 
